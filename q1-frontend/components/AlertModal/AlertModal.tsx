@@ -9,7 +9,20 @@ export default function AlertModal({useContents}: AlertModalProps) {
   function onSubmitEvent(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // hint: the alert given is at (e.target as any).elements[0].value - ignore typescript being annoying
-    console.log((e.target as any)[0].value);
+    // console.log((e.target as any)[0].value);
+    const input: string = (e.target as any)[0].value
+    
+    useContents(content => ({
+      columnTitles: content.columnTitles,
+      rowContents: [...content.rowContents,
+        {
+          alert: input,
+          status: '',
+          updates: []
+        }
+      ]
+    })
+    )
   }
   
   return (
