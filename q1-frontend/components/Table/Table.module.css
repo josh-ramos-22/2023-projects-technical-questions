@@ -18,3 +18,17 @@
     flex: 1 1 0px;
     flex-direction: column;
 }
+
+.update {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.update_datestamp {
+    color: blue;
+    font-size: 7pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
